@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practical.MainApp">
+   <children>
+      <Separator layoutX="297.0" layoutY="-13.0" orientation="VERTICAL" prefHeight="413.0" prefWidth="7.0" />
+      <Label layoutX="26.0" layoutY="94.0" text="Tel" />
+      <Label layoutX="26.0" layoutY="43.0" text="Name" />
+      <Label layoutX="25.0" layoutY="143.0" prefHeight="17.0" prefWidth="32.0" text="Email" />
+      <Label layoutX="25.0" layoutY="191.0" prefHeight="17.0" prefWidth="52.0" text="Faculty" />
+      <Label layoutX="16.0" layoutY="251.0" text="Hall" />
+      <Button fx:id="btnSave" layoutX="51.0" layoutY="309.0" mnemonicParsing="false" onAction="#onSave" text="Save Details" />
+      <Button fx:id="btnOpen" alignment="CENTER" layoutX="379.0" layoutY="39.0" mnemonicParsing="false" onAction="#onOpen" text="Open Saved Details" />
+      <Button fx:id="btnRest" layoutX="173.0" layoutY="309.0" mnemonicParsing="false" onAction="#OnReset" text="Reset Details" />
+      <ComboBox fx:id="ComboFaculty" layoutX="75.0" layoutY="187.0" onAction="#onComboFacultySelected" prefWidth="150.0" />
+      <ComboBox fx:id="ComboHall" layoutX="75.0" layoutY="247.0" onAction="#onComboHallSelected" prefWidth="150.0" />
+      <TextField fx:id="txtName" layoutX="75.0" layoutY="39.0" promptText="Seyram" />
+      <TextField fx:id="txtPhone" layoutX="75.0" layoutY="90.0" promptText="0540501192" />
+      <TextField fx:id="txtEmail" layoutX="75.0" layoutY="139.0" promptText="seyram@gmail.com" />
+      <Label fx:id="lblSave" layoutX="50.0" layoutY="362.0" prefHeight="17.0" prefWidth="225.0" />
+      <TextArea fx:id="txtEditor" layoutX="307.0" layoutY="75.0" prefHeight="322.0" prefWidth="288.0" />
+   </children>
+</AnchorPane>

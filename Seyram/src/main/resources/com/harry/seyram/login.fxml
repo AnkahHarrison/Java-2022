@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.harry.seyram.HelloController">
+   <children>
+      <AnchorPane layoutX="3.0" prefHeight="406.0" prefWidth="606.0">
+         <children>
+            <TextField fx:id="txtUsername" layoutX="275.0" layoutY="44.0" prefHeight="16.0" prefWidth="198.0" promptText="Username">
+               <font>
+                  <Font name="Arial Narrow Bold" size="14.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="txtPassword" layoutX="275.0" layoutY="95.0" promptText="Password">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="btnLogin" layoutX="232.0" layoutY="172.0" mnemonicParsing="false" onAction="#onLogin" text="LOGIN" textFill="#1a00ff" />
+            <Button fx:id="btnCancel" layoutX="303.0" layoutY="172.0" mnemonicParsing="false" onAction="#onCancel" text="CANCEL" textFill="RED" />
+            <Label fx:id="lblLogin" layoutX="24.0" layoutY="352.0" prefHeight="26.0" prefWidth="225.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="textEditor" layoutX="24.0" layoutY="23.0" prefHeight="174.0" prefWidth="187.0" promptText="textEditor">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="btnCopy" layoutX="14.0" layoutY="220.0" mnemonicParsing="false" onAction="#onCopy" text="clickTocopyText" />
+            <Button fx:id="btnChangeColor" layoutX="174.0" layoutY="220.0" mnemonicParsing="false" onAction="#onChangeColor" text="fontColorChange" />
+            <Label fx:id="lblLogin1" layoutX="232.0" layoutY="141.0" prefHeight="18.0" prefWidth="278.0" text="Label" />
+            <Label fx:id="lblDisplay" layoutX="124.0" layoutY="301.0" onDragDetected="#onMouseEnter" onMouseDragOver="#onMouseEnter" prefHeight="18.0" prefWidth="372.0" text="Label" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

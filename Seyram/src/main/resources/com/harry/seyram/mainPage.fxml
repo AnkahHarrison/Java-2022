@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.harry.seyram.HelloController">
+   <children>
+      <AnchorPane layoutY="-14.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <RadioButton fx:id="rdnMale" layoutX="104.0" layoutY="205.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" text="MALE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+            </RadioButton>
+            <Label layoutX="193.0" layoutY="22.0" prefHeight="60.0" prefWidth="201.0" text="BIODATA" />
+            <RadioButton fx:id="rdnFeMale" layoutX="230.0" layoutY="209.0" mnemonicParsing="false" text="FEMALE" toggleGroup="$gender" />
+            <RadioButton fx:id="rdnOther" layoutX="401.0" layoutY="209.0" mnemonicParsing="false" text="OTHER" toggleGroup="$gender" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,170 @@
+package com.example.practice;
+
+import javafx.application.Platform;
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class HelloController implements Initializable {
+    String[] operations = {"+", "-", "*", "/"};
+    @FXML
+    private Button btnCancel;
+
+    @FXML
+    private Button btnLogin;
+
+    @FXML
+    private Label lblLogin;
+
+    @FXML
+    private TextField txtPassword;
+
+    @FXML
+    private TextField txtUsername;
+
+    @FXML
+    private RadioButton RdnFemale;
+
+    @FXML
+    private RadioButton RdnMale;
+
+    @FXML
+    private Button btnCalculate;
+
+    @FXML
+    private ComboBox<String>  operation;
+
+    @FXML
+    private Button btnOpen;
+
+    @FXML
+    private Button btnSave;
+    @FXML
+    private Button btnLogout;
+    @FXML
+    private ToggleGroup gender;
+
+    @FXML
+    private Label lblResult;
+
+    @FXML
+    private TextArea txtEditor;
+
+    @FXML
+    private TextField txtEmail;
+
+    @FXML
+    private TextField txtFirstNumber;
+
+    @FXML
+    private TextField txtFullName;
+
+    @FXML
+    private TextField txtPhone;
+
+    @FXML
+    private TextField txtSecondNumber;
+
+
+    @FXML
+    void onCancel(ActionEvent event) {
+        Platform.exit();
+    }
+    String [] items ={"+","-","*","-"};
+    @FXML
+    void onLogin(ActionEvent event) throws IOException {
+String typedUsername=txtUsername.getText();
+String typedPassword=txtPassword.getText();
+
+if(typedUsername.equals("admin")&&typedPassword.equals("1234")){
+//    lblLogin.setText("congratulations");
+//    show alert message start
+Alert alert =new Alert(Alert.AlertType.INFORMATION);
+alert.setResizable(false);
+alert.setTitle("Message");
+alert.setHeaderText("Welcome admin");
+alert.showAndWait();
+//end of show alert
+    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("MainApp.fxml"));
+    Scene scene = new Scene(fxmlLoader.load(), 552, 400);
+    Stage stage=new Stage();
+    Stage loginstage=(Stage) btnLogin.getScene().getWindow();
+    loginstage.close();
+    stage.setTitle("Main");
+    stage.setResizable(false);
+    stage.setScene(scene);
+    stage.show();
+}else{lblLogin.setTextFill(Color.RED);
+    lblLogin.setText("invalid Login");
+
+
+//    show alert message start
+    Alert alert =new Alert(Alert.AlertType.INFORMATION);
+    alert.setResizable(false);
+    alert.setTitle("Message");
+    alert.setHeaderText("Incorrect Username or password,please try again");
+    alert.showAndWait();
+//end of show alert
+}
+
+    }
+    @FXML
+    void onLogout(ActionEvent event) throws IOException {
+        Stage logoutstage =(Stage) btnLogout.getScene().getWindow();
+        logoutstage.close();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Stage stage=new Stage();
+        stage.setTitle("Login");
+        stage.setResizable(false);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+
+    @FXML
+    void onCalculate(ActionEvent event) {
+
+    }
+
+//    @FXML
+//    void onCombo(ActionEvent event) {
+////        String s=btnCombo.getSelectionModel().getSelectedItem().toString();
+//
+//    }
+
+    @FXML
+    void onOpen(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onSave(ActionEvent event) {
+        // a code to print h
+
+    }
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+//        String [] items ={"Addition","Multiplication","Division","Subtraction"};
+//        btnCombo.getItems().addAll(items);
+//        ObservableList<String> list= FXCollections.observableArrayList("Addition","Multiplication","Division","Subtraction");
+//        btnCombo.setItems(list);
+// a
+        operation.getItems().addAll(operations);
+    }
+}

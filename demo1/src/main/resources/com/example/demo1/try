@@ -1,0 +1,9 @@
+Stage loginStage = (Stage) btnLogin.getScene().getWindow();
+            loginStage.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("MainApp.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+            Stage stage=new Stage();
+            stage.setTitle("Login");
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();

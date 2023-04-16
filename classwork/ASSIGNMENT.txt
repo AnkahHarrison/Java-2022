@@ -1,0 +1,6 @@
+Name		Gender 	Age 		Rich
+
+Ama		F		26.1		true
+Kofi		M		2.1		True
+John		M		40		FaLse
+Mike		M		28		TRUE

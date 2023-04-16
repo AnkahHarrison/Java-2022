@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="552.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practice.MainApp">
+   <children>
+      <Separator layoutX="274.0" orientation="VERTICAL" prefHeight="244.0" prefWidth="7.0" />
+      <Separator layoutX="-2.0" layoutY="205.0" prefHeight="17.0" prefWidth="558.0">
+         <padding>
+            <Insets top="40.0" />
+         </padding>
+      </Separator>
+      <Button fx:id="btnOpen" layoutX="228.0" layoutY="249.0" mnemonicParsing="false" onAction="#onOpen" text="Open Text File" />
+      <TextArea fx:id="txtEditor" layoutY="288.0" prefHeight="119.0" prefWidth="552.0" />
+      <Label layoutX="14.0" layoutY="253.0" prefHeight="17.0" prefWidth="92.0" text="Read Text File" />
+      <Label layoutX="14.0" layoutY="14.0" text="Basic Maths Calculations">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="43.0" text="First Number" />
+      <Label layoutX="17.0" layoutY="77.0" text="Second Number" />
+      <Label fx:id="lblResult" layoutX="14.0" layoutY="218.0" prefHeight="17.0" prefWidth="217.0" text="Results" />
+      <Label layoutX="298.0" layoutY="14.0" prefHeight="17.0" prefWidth="92.0" text="Contact Details">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="43.0" text="Full Name" />
+      <Label layoutX="286.0" layoutY="73.0" text="Mobile" />
+      <Label layoutX="290.0" layoutY="114.0" text="Email" />
+      <Label layoutX="325.0" layoutY="143.0" text="Gender" />
+      <ComboBox fx:id="operation" layoutX="53.0" layoutY="110.0" prefHeight="25.0" prefWidth="201.0" promptText="Select Basic Maths Operation" />
+      <TextField fx:id="txtFirstNumber" layoutX="112.0" layoutY="39.0" />
+      <TextField fx:id="txtSecondNumber" layoutX="112.0" layoutY="69.0" />
+      <Button fx:id="btnCalculate" layoutX="87.0" layoutY="166.0" mnemonicParsing="false" onAction="#onCalculate" text="Perform Maths Operation" />
+      <TextField fx:id="txtFullName" layoutX="358.0" layoutY="39.0" />
+      <TextField fx:id="txtPhone" layoutX="358.0" layoutY="69.0" />
+      <TextField fx:id="txtEmail" layoutX="358.0" layoutY="102.0" />
+      <Button fx:id="btnSave" layoutX="364.0" layoutY="214.0" mnemonicParsing="false" onAction="#onSave" text="Save Details" />
+      <HBox layoutX="332.0" layoutY="166.0" prefHeight="25.0" prefWidth="201.0" spacing="10.0" style="-fx-background-radius: 50;">
+         <children>
+            <RadioButton fx:id="RdnMale" lineSpacing="50.0" mnemonicParsing="false" text="Male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="RdnFemale" lineSpacing="10.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+         </children>
+      </HBox>
+      <Button fx:id="btnLogout" layoutX="358.0" layoutY="249.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="25.0" prefWidth="92.0" text="Logout" />
+   </children>
+</AnchorPane>

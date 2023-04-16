@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import de.jensd.fx.glyphs.GlyphsStack?>-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
+   <children>
+      <AnchorPane layoutX="-6.0" prefHeight="400.0" prefWidth="620.0">
+         <children>
+            <TextField fx:id="txtUsername" layoutX="186.0" layoutY="56.0" promptText="Username">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="txtPassword" layoutX="186.0" layoutY="156.0" promptText="Password">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </PasswordField>
+            <Label fx:id="lblLogin" layoutX="177.0" layoutY="229.0" prefHeight="17.0" prefWidth="290.0" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLogin" layoutX="185.0" layoutY="299.0" mnemonicParsing="false" onAction="#onLogin" onKeyPressed="#onEnter" prefHeight="30.0" prefWidth="121.0" text="Login">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons8_login_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="lblReset" layoutX="165.0" layoutY="362.0" onMouseClicked="#onMouseClicked" prefHeight="17.0" prefWidth="290.0" text="Forget Password? Click to reset" textFill="#16168d">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCancel" layoutX="329.0" layoutY="299.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="49.0" prefWidth="121.0" text="Cancel">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../cancel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="51.0" fitWidth="64.0" layoutX="121.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons8_user_48px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="65.0" layoutX="121.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons8_password_48px_1.png" />
+               </image>
+            </ImageView>
+<!--            <GlyphsStack />-->
+<!--            <GlyphsStack layoutX="97.0" layoutY="143.0" />-->
+         </children>
+         <effect>
+            <Blend />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
